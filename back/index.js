@@ -1,17 +1,18 @@
 const express = require('express')
-
+const userRoutes = require('./routes/user')
 const connectDB = require('./db/connect')
 require('dotenv').config('')
+const cors = require('cors')
 
 
 const app = express()
 
+//midleware
+
+app.use(cors('*'))
 
 
-app.get('/',(req, res)=>{
-res.send('hello')
-})
-
+app.use('/api/user', userRoutes)
 
 
 
