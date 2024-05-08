@@ -5,7 +5,7 @@ const userRoutes = Router()
 
 
 const {
-getUser
+getUser,
 } = require('../controllers/userController')
 
 
