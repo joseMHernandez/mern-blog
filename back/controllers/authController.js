@@ -11,7 +11,8 @@ try {
         !req.body.password ||
         req.body.username === '' || req.body.email === '' || req.body.password === ''
     ){
-        return res.status(400).json('all fields required')
+   return  res.status(400).json({message:'all fields are required' })
+    
     }
 
     //to hash password = npm install bcryptjs imported and then this code down below
@@ -24,9 +25,10 @@ try {
     }
     const data = await User.create(newUser)
     
-    return res.send('signup is successful').status(201).json(data)
+    return res.status(201).json({message:'signup is successful', data})
 } catch (error) {
     return res.status(500).json('the username or email is already in used')
+    
 }
 
 
