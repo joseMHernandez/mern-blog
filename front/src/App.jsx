@@ -8,6 +8,7 @@ import Projects from './pages/Projects';
 import DashBoard from './pages/DashBoard';
 import SingUp from './pages/SingUp';
 import Header from './components/Header';
+import FooterComp  from './components/FooterComp';
 const App = () => {
   return (
 <BrowserRouter>
@@ -22,7 +23,7 @@ const App = () => {
   <Route path='/projects' element={<Projects/>}/>
 
 </Routes>
-
+<FooterComp/>
 </BrowserRouter>  
 
 )
